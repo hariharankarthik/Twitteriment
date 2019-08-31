@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aje-bB-ZYC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Q0j-1R-9zj">
+            <objects>
+                <viewController id="Aje-bB-ZYC" customClass="ViewController" customModule="Twitteriment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfV-dU-Dyw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNr-xR-46S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="x05-En-E76">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRy-m4-42c">
+                                                <rect key="frame" x="131.5" y="0.0" width="112" height="457"/>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="87"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What people feel about..." textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-b2-jbj">
+                                                <rect key="frame" x="0.0" y="512" width="375" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hlX-O8-uFr"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmZ-0q-1wk">
+                                                <rect key="frame" x="138" y="617" width="99" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ozJ-Pg-nBE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Predict!">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sentimentButton:" destination="Aje-bB-ZYC" eventType="touchUpInside" id="CJ0-24-7J3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HOr-b2-jbj" firstAttribute="leading" secondItem="x05-En-E76" secondAttribute="leading" id="XVq-I4-adS"/>
+                                            <constraint firstAttribute="trailing" secondItem="HOr-b2-jbj" secondAttribute="trailing" id="igs-wO-iDK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="x05-En-E76" secondAttribute="trailing" id="3Fs-Xu-Fo7"/>
+                                    <constraint firstItem="x05-En-E76" firstAttribute="leading" secondItem="LNr-xR-46S" secondAttribute="leading" id="3UW-h0-Qdy"/>
+                                    <constraint firstAttribute="bottom" secondItem="x05-En-E76" secondAttribute="bottom" id="aIc-hD-pg3"/>
+                                    <constraint firstItem="x05-En-E76" firstAttribute="top" secondItem="LNr-xR-46S" secondAttribute="top" id="sjl-le-9Qf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LNr-xR-46S" firstAttribute="leading" secondItem="nsJ-QY-geo" secondAttribute="leading" id="Dn1-TP-c5M"/>
+                            <constraint firstItem="LNr-xR-46S" firstAttribute="top" secondItem="xfV-dU-Dyw" secondAttribute="top" id="ER9-4s-CjJ"/>
+                            <constraint firstItem="LNr-xR-46S" firstAttribute="trailing" secondItem="nsJ-QY-geo" secondAttribute="trailing" id="eLr-VF-L93"/>
+                            <constraint firstItem="LNr-xR-46S" firstAttribute="bottom" secondItem="nsJ-QY-geo" secondAttribute="bottom" id="yRO-eI-sJL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nsJ-QY-geo"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="LNr-xR-46S" id="Eec-1v-iHw"/>
+                        <outlet property="sentimentLabel" destination="kRy-m4-42c" id="FwL-YA-3MI"/>
+                        <outlet property="sentimentText" destination="HOr-b2-jbj" id="IYD-Yq-CLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceV-S3-nML" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
